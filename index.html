@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Easy QR codes">
+		<meta name="keywords" content="Easy QR codes">
+		<meta property="og:title" content="QR Code Lite">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://qr-code-bot.ru/my_media/main_logo.png">
+		<meta property="og:image:width" content="512">
+		<meta property="og:image:height" content="512">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:description" content="🤖 Bot for generating QR codes with images, with ready-made templates">
+		<meta name="color-scheme" content="light dark">
+		<meta name="theme-color" content="#41A4DF">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+		<link rel="icon" type="image/svg" href="src/logo/Qr-codeQR.svg" style="width: 128px; height: 128px;">
+		<link rel="stylesheet" type="text/css" media="all" href="src/styles/index.css">
+		<link rel="stylesheet" type="text/css" media="all and (prefers-color-scheme: light)" href="src/styles/media/light.css">
+		<link rel="stylesheet" type="text/css" media="all and (prefers-color-scheme: dark)" href="src/styles/media/dark.css">
+		<link rel="stylesheet" type="text/css" media="screen and (hover: hover)" href="src/styles/media/hover.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 390px)" href="src/styles/media/screen/xs.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 640px)" href="src/styles/media/screen/sm.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="src/styles/media/screen/md.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)" href="src/styles/media/screen/lg.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1280px)" href="src/styles/media/screen/xl.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1440px)" href="src/styles/media/screen/2xl.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1600px)" href="src/styles/media/screen/3xl.css">
+		<link rel="stylesheet" type="text/css" media="screen and (prefers-reduced-motion: no-preference)" href="src/styles/animations.css">
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="src/styles/noscript.css">
+		</noscript>
+		<link rel="manifest" href="manifest.json">
+
+		<title>QR-code Lite</title>
+	</head>
+	<body class="flex flex-col justify-center items-center bg-white dark:bg-black no-scrollbar" style="overflow-x:hidden;">
+		<header class="max-w-[1200px] w-full flex flex-col justify-center gap-13 lg:mb-[120px] pt-13 px-5 dark:bg-black">
+			<nav class="w-full flex justify-between items-center">
+				<div class="w-[104px]">
+					<img
+						src="src/logo/Qr-codeQR.svg"
+						class="w-12 h-12 lg:w-16 lg:h-16"
+						style="width: 64px; height: 64px;"
+					/>
+				</div>
+				<menu class="hidden sm:flex items-center gap-8 mx-auto text-xl">
+					<li>
+						<a href="#use-cases">Применение</a>
+					</li>
+					<li>
+						<a href="#features">Особенности</a>
+					</li>
+					<li>
+						<a href="#start-guide">Как использовать</a>
+					</li>
+				</menu>
+				<a
+					class="
+						h-full py-3 px-8 lg:py-4 lg:px-10 font-medium text-lg text-blue-600 whitespace-nowrap bg-gray-150 rounded-full light:hover:bg-lightblue-50
+						dark:text-white dark:bg-transparent dark:border dark:border-white dark:border-opacity-60 hover:border-opacity-100
+						transition-colors duration-200
+					"
+					href="https://t.me/Qr_code_lite_bot?start=web"
+					target="_blank"
+				>
+					Начать
+				</a>
+			</nav>
+
+			<div class="flex flex-col md:flex-row gap-4">
+				<section class="flex flex-col gap-6 lg:gap-8">
+					<h1 class="font-semibold text-center lg:text-left text-[46px] 2xl:text-[80px]">
+						Генератор QR-кодов в
+						<span class="text-aqua-500">телеграмм боте</span>
+					</h1>
+					<div class="flex flex-col items-center lg:items-start gap-3 lg:gap-8 font-normal text-lg 2xl:text-xl text-center">
+						<p class="lg:text-left">
+							Легко создавайте Qr-коды в телеграм боте для любых задач
+						</p>
+
+						<a
+							class="
+								py-3 px-8 lg:py-4 lg:px-10 font-medium text-lg text-white whitespace-nowrap bg-aqua-500 hover:bg-blue-600 rounded-full
+								transition-colors duration-200
+							"
+							href="https://t.me/Qr_code_lite_bot?start=web"
+							target="_blank"
+						>
+							Начать
+						</a>
+					</div>
+					<div class="flex flex-col items-center lg:items-start gap-3 lg:mt-6">
+						<div class="flex">
+							<img
+								class="w-16 h-16 xl:w-24 xl:h-24 border-4 border-white dark:border-black rounded-full"
+								src="src/images/bots/first.png"
+								alt="First bot icon"
+							>
+							<img
+								class="w-16 h-16 xl:w-24 xl:h-24 -ml-4 xl:-ml-8 border-4 border-white dark:border-black rounded-full"
+								src="src/images/bots/second.png"
+								alt="Second bot icon"
+							>
+							<img
+								class="w-16 h-16 xl:w-24 xl:h-24 -ml-4 xl:-ml-8 border-4 border-white dark:border-black rounded-full"
+								src="src/images/bots/third.png"
+								alt="Third bot icon"
+							>
+							<img
+								class="w-16 h-16 xl:w-24 xl:h-24 -ml-4 xl:-ml-8 border-4 border-white dark:border-black rounded-full"
+								src="src/images/bots/fourth.png"
+								alt="Fourth bot icon"
+							>
+						</div>
+						<p class="font-normal text-lg lg:text-[20px]">Уже используют</p>
+					</div>
+				</section>
+				<picture>
+					<source srcset="src/images/phone/lg-dark.webp" media="(min-width: 1024px) and (prefers-color-scheme: dark)">
+					<source srcset="src/images/phone/sm-dark.webp" media="(prefers-color-scheme: dark)">
+					<source srcset="src/images/phone/lg.webp" media="(min-width: 1024px)">
+					<img
+						class="w-inherit h-inherit mx-auto py-8 px-3 lg:px-[76px] lg:max-w-[488px]"
+						srcset="src/images/phone/sm.webp"
+						alt="Crypto Bot screenshot from Telegram preview"
+					/>
+				</picture>
+			</div>
+		</header>
+
+		<main class="w-full flex flex-col items-center bg-gray-700 dark:bg-gray-900">
+			<!-- Use cases -->
+			<article id="use-cases" class="max-w-screen w-full xl:h-screen noscript:h-reset flex justify-center bg-gray-700 dark:bg-gray-900">
+				<div class="max-w-[1200px] flex flex-col xl:flex-row items-center gap-y-6 py-8 ">
+					<div class="w-screen overflow-hidden">
+						<div class="flex flex-row noscript:flex-col noscript:gap-12">
+							<section class="w-full flex flex-0 flex-col xl:flex-row xl:gap-30 items-center gap-6 px-5 text-white">
+								<div class="
+									w-[336px] h-[336px] sm:w-[488px] sm:h-[488px] flex flex-col justify-center items-center gap-1 p-7 text-sm text-black
+									bg-gradient direction-[340deg] from-red-200 to-lavender-100 rounded-3xl cursor-default
+								"
+								>
+									<div class="relative w-full py-[6px] px-3 lg:py-[10px] lg:px-4 font-sf-pro lg:text-xl bg-white rounded-xl">
+										<img src="src/images/in_b_qr.png" alt="">
+									</div>
+									<div class="relative w-full flex p-[10px] lg:text-xl text-white bg-darkblue-400 rounded-t-md rounded-b-xl">
+										<span class="mx-auto">✅ ✅ ✅</span>
+										<svg class="absolute top-1 right-1" xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+											<path d="M1.29736 6.35965L6.20364 1.45337M6.20364 1.45337V6.35965M6.20364 1.45337H1.29736" stroke="white" stroke-width="1.38802" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+
+									<div class="relative w-full py-[6px] px-3 lg:py-[10px] lg:px-4 font-sf-pro lg:text-xl bg-white rounded-xl">
+										<img src="src/images/not.png" alt="">
+									</div>
+									<div class="relative w-full flex p-[10px] lg:text-xl text-white bg-darkblue-400 rounded-t-md rounded-b-xl">
+										<span class="mx-auto">❌ ❌ ❌</span>
+										<svg class="absolute top-1 right-1" xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+											<path d="M1.29736 6.35965L6.20364 1.45337M6.20364 1.45337V6.35965M6.20364 1.45337H1.29736" stroke="white" stroke-width="1.38802" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="flex flex-1 flex-col gap-6 items-center xl:items-start text-center xl:text-left">
+									<h2 class="font-semibold text-[32px] lg:text-[56px]">
+										<p class="text-aqua-500">Больше
+											контекста</p>
+										<p>благодаря картинке</p>
+									</h2>
+									<p class="text-lg lg:text-xl">
+										Вы можете разместить несколько красивых QR-кодов рядом и благодаря картинке будет понят куда какой QR-код ведет
+									</p>
+									<button class="
+										max-w-max mt-auto py-3 px-8 lg:py-4 lg:px-10 font-medium text-lg text-white whitespace-nowrap
+										bg-aqua-500 hover:bg-blue-600 rounded-full transition-colors duration-200 noscript:hidden
+									">
+										<a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto">Открыть бота</a>
+									</button>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- Features -->
+			<article
+				id="features"
+				class="max-w-[1200px] grid gap-4 py-20 lg:py-[144px] px-2 xs:px-5 bg-white dark:bg-black bg-full-bleed lg:grid-cols-5"
+			>
+				<section class="
+					flex flex-col lg:flex-col-reverse gap-6 p-8 lg:py-[42px] lg:px-14 text-black dark:text-gray-300
+					bg-gray-50 dark:bg-gray-900 rounded-3xl lg:col-span-5 lg:row-span-2
+				">
+					<div class="flex flex-wrap justify-center lg:justify-between items-center gap-y-3 flex-wrap-4x2">
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/t_me.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								t.me
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/tiktok.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								TikTok
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/youtube.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								YouTube
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/whatsapp.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								WhatsApp
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/vk.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								Vk
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/linkedin.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								Linkedin
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/pinterest.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								Pinterest
+							</span>
+						</div>
+						<div class="group flex flex-col items-center items-center gap-2">
+							<img src="src/logos/reddit.png" style="border-radius: 100%;" class="w-14 h-14 lg:w-24 lg:h-24 group-hover:scale-110 transition-transform duration-300">
+							<span class="hidden lg:block cursor-default group-hover:text-black group-hover:dark:text-white transition-colors">
+								Reddit
+							</span>
+						</div>
+					</div>
+					<div class="flex flex-col gap-4">
+						<h2 class="font-semibold text-[28px] lg:text-[42px] dark:text-white">
+							Готовые шаблоны изображений для соц-сетей
+						</h2>
+						<p class="text-lg">
+							Огромный выбор готовых шаблонов для ваших соцсетей, которые можно найти в <a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="text-aqua-500">телеграмм канале</span></a>
+						</p>
+					</div>
+				</section>
+
+				<section class="
+					group flex flex-col items-center gap-6 p-8 lg:py-[42px] lg:px-14 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 rounded-3xl
+					lg:col-span-2 lg:row-span-2
+				">
+					<div class="py-7 px-5">
+						<div class="relative">
+							<div class="
+								max-w-max py-4 px-10 text-[22px] text-black
+								bg-gradient direction-[240deg] from-gray-150 to-darkblue-100 rounded-2xl
+								dark:text-white dark:from-blue-300 dark:to-blue-600
+								group-hover:animate-click group-hover:brightness-95 transform-filter duration-200 delay-250
+							" style="width: 320px;">
+								<a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="cursor-default">🌄 Добавить изображение на фон</span></a>
+							</div>
+
+							<svg
+								class="
+									absolute bottom-0 right-0 translate-1/2 lg:translate-y-full lg:translate-x-130 group-hover:translate-1/3
+									transition-transform duration-500
+								"
+								xmlns="http://www.w3.org/2000/svg"
+								width="46" height="50"
+								viewBox="0 0 46 50"
+								fill="none"
+							>
+								<path d="M11.1275 3.64677C6.7178 1.12449 1.36473 4.88154 2.23774 9.88607L8.10158 43.5003C8.98108 48.542 15.9691 49.1632 17.724 44.3556L22.4947 31.2864C22.782 30.4994 23.5293 29.9749 24.3671 29.9723L38.2797 29.9285C43.3975 29.9124 45.189 23.1294 40.7465 20.5884L11.1275 3.64677Z" fill="url(#paint0_linear_955_4961)" stroke="#F1F5F9" stroke-width="4"/>
+								<defs>
+									<linearGradient id="paint0_linear_955_4961" x1="1.90306" y1="-33.3301" x2="-24.3108" y2="39.2676" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#9FCCFA"/>
+										<stop offset="1" stop-color="#0974F1"/>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+					</div>
+					<div class="w-full flex flex-col items-start gap-4">
+						<h2 class="font-semibold text-[28px] lg:text-[42px] dark:text-white">
+							QR-код в 1 клик
+						</h2>
+						<p class="text-lg">
+							Просто откройте <a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="text-aqua-500">@Qr_code_lite_bot</span></a>,
+							отправьте изображение и текст
+						</p>
+					</div>
+				</section>
+
+				<section
+					id="exchange-rates-section"
+					class="
+						flex flex-col gap-6 p-8 lg:py-[42px] lg:px-14 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 rounded-3xl lg:col-span-2
+						lg:row-span-2 lg:row-start-5
+					"
+				>
+					<div class="flex justify-center items-center">
+						<div id="exchange-rates-container" class="relative w-[106px] h-16 lg:w-[172px] lg:h-[104px] flex z-0">
+							<div class="absolute border-4 border-gray-50 dark:border-gray-900 rounded-full translate-x-2/3 z-2 transition-transform duration-500">
+								<img
+									src="src/images/russia.svg"
+									class="w-12 h-12 lg:w-16 lg:h-16 imglang"
+								/>
+							</div>
+							<div class="absolute border-4 border-gray-50 dark:border-gray-900 rounded-full translate-x-1/3 z-1 transition-transform duration-500">
+								<img
+									src="src/images/germany.svg"
+									class="w-12 h-12 lg:w-16 lg:h-16 imglang"
+								/>
+							</div>
+							<div class="absolute border-4 border-gray-50 dark:border-gray-900 rounded-full z-0 transition-transform duration-500">
+								<img
+									src="src/images/uk.svg"
+									class="w-12 h-12 lg:w-16 lg:h-16 imglang"
+								/>
+							</div>
+						</div>
+
+						<div class="
+							flex flex-col -ml-[14px] -mr-[10px] py-1 px-3 text-black bg-white bg-opacity-60 backdrop backdrop-blur-[6px]
+							border border-white rounded-full z-1 dark:text-white dark:bg-black dark:border-black imgstr
+						">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" fill="none">
+								<path d="M1.49609 4.04847H14.5061M14.5061 4.04847L11.4576 1M14.5061 4.04847L11.4576 7.09695" stroke="currentColor" stroke-opacity="0.92" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" fill="none">
+								<path d="M14.5061 4.1454H1.4961M1.4961 4.1454L4.54458 1.09692M1.4961 4.1454L4.54458 7.19387" stroke="currentColor" stroke-opacity="0.92" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
+							</svg>
+						</div>
+
+						<img
+							src="src/logo/Qr-codeQR.svg"
+							alt="QR Bot Logo"
+							class="w-12 h-12 lg:w-16 lg:h-16 imglang"
+						/>
+					</div>
+					<div class="flex flex-col gap-4">
+						<h2 class="font-semibold text-[28px] lg:text-[42px] dark:text-white">
+							Множество языков
+						</h2>
+						<p class="text-lg">
+							Бот был переведен на <span class="text-aqua-500">3 языка</span>
+						</p>
+					</div>
+				</section>
+
+				<section class="
+					flex flex-col items-center gap-6 p-8 lg:py-[42px] lg:px-14 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 rounded-3xl
+					lg:col-span-3 lg:row-span-4
+				">
+					<div class="
+						max-w-[336px] lg:max-w-reset flex flex-col gap-[2px] lg:gap-1 py-6 px-5 lg:py-12 lg:px-[76px]
+						text-[10px] text-black bg-telegram bg-cover bg-no-repeat rounded-2xl
+					" style="border-radius: 16px;">
+						<div
+							class="
+								relative min-h-[60px] min-w-[255px] lg:min-h-[60px] lg:min-w-[445px] w-full py-[6px]
+								px-3 lg:py-[10px] lg:px-4 lg:text-lg bg-white rounded-t-[9px] rounded-b-sm
+							"
+							style="padding: 0; margin: 0; border-radius: 16px;"
+						>
+							<div
+								class="statistics-view"
+								data-value="manual_1"
+								aria-hidden="false"
+								style="margin: 1px 1px; padding: 0;"
+								id="content_manual_1"
+							>
+								<img src="src/images/1.gif" alt="" style="border-radius: 16px; margin-bottom: 8px;" class="img1">
+								<img src="src/images/2.gif" alt="" style="border-radius: 16px; margin-bottom: 8px;" class="img2">
+								<p style="margin: 0 5px 5px;" class="p1">Создание обычного и красивого QR-кода:</p>
+
+								<span class="absolute bottom-1 right-3 text-[10px] lg:text-sm text-black text-opacity-40">
+									9:41
+								</span>
+							</div>
+						</div>
+
+						<div class="grid grid-cols-2 gap-[2px] lg:gap-1 text-center text-white">
+							<button
+								class="
+									statistics-timeframe col-span-2 p-2 lg:text-lg bg-aqua-900 bg-opacity-40 hover:bg-opacity-60 rounded-sm
+									transition-colors data-[active=true]:bg-opacity-60
+									data-[active=true]:before:content-dot data-[active=true]:after:content-dot
+								"
+								type="button"
+								onclick="btn1()"
+							>
+								Как сделать обычный и красивый QR-код
+							</button>
+
+							<button
+								class="
+									statistics-timeframe col-span-2 p-2 lg:text-lg bg-aqua-900 bg-opacity-40 hover:bg-opacity-60 rounded-sm
+									transition-colors data-[active=true]:bg-opacity-60
+									data-[active=true]:before:content-dot data-[active=true]:after:content-dot
+								"
+								type="button"
+								onclick="btn2()"
+							>
+								Как сканировать через mini app
+							</button>
+						</div>
+					</div>
+					<div class="flex flex-col gap-4">
+						<h2 class="font-semibold text-[28px] lg:text-[42px] dark:text-white">
+							Подробная инструкция
+						</h2>
+						<p class="text-lg">
+							Откройте <a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="text-aqua-500">@QR_code_lite_bot</span></a>,
+							отправте команду <a href="https://t.me/Qr_code_lite_bot?start=cmd_help" target="_blank"><span class="text-aqua-500 whitespace-nowrap">/help</span></a>
+						</p>
+					</div>
+				</section>
+			</article>
+
+			<!-- Start Guide -->
+			<article id="start-guide" class="w-full flex justify-center py-8 lg:py-[120px] bg-gray-50 dark:bg-gray-900">
+				<div class="max-w-[1200px] flex flex-col gap-6 lg:gap-10 px-5 xl:px-0">
+					<h2 class="font-semibold text-center text-[32px] lg:text-[56px]">
+						Как использовать <span class="text-aqua-500 whitespace-nowrap">QR Bot</span>
+					</h2>
+					<section class="flex flex-col lg:justify-between items-center lg:flex-row-reverse gap-4">
+						<div class="
+							w-[336px] h-[277px] lg:w-[590px] lg:h-[488px] flex justify-center items-center p-7 lg:px-0 text-sm text-black
+							bg-gradient direction-[297deg] from-blue-300 to-lavender-300 rounded-3xl qrcont
+						">
+							<div class="w-full lg:w-2/3 flex flex-col gap-2 qrimg-cont">
+								<div class="relative py-[7px] px-3 bg-white text-[13px] lg:text-lg rounded-t-xl rounded-b-md" style="display: flex; justify-content: center;">
+									<img src="src/images/qr_tg.png" class="qrimg">
+								</div>
+								<div class="w-full flex p-[10px] text-[13px] lg:text-lg text-white bg-aqua-900 bg-opacity-40 rounded-t-md rounded-b-xl qrbtn" style="margin-top: -5px; border-radius: 7px;">
+									<a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto" style="font-size: 16px;"><span class="mx-auto qrtext">Открыть бота</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="w-full lg:w-reset grid grid-cols-max lg:flex lg:flex-col gap-4 lg:gap-5">
+							<div class="
+								w-9 h-9 lg:w-16 lg:h-16 flex justify-center items-center text-2xl lg:text-[42px]
+								bg-gradient direction-[220deg] from-black to-darkblue-800 rounded-full
+								text-white dark:text-black dark:bg-white
+							">
+								1
+							</div>
+							<h3 class="col-start-2 flex gap-4 font-semibold text-[28px] lg:text-[42px]">
+								Создание обычных QR-кодов
+							</h3>
+							<ol class="col-start-2 flex flex-col gap-2 list-decimal list-inside text-lg">
+								<li>Откройте <a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="text-aqua-500">@QR_code_lite_bot</span></a></li>
+								<li>Напишите и отправьте <span class="text-aqua-500">текст QR-кода</span></li>
+							</ol>
+						</div>
+					</section>
+					<section class="flex flex-col lg:justify-between items-center lg:flex-row gap-4">
+						<div class="
+							w-[336px] h-[277px] lg:w-[590px] lg:h-[488px] flex flex-col justify-center items-center gap-2 p-5 lg:px-0 text-sm text-black
+							bg-gradient direction-[207deg] from-orange-200 to-yellow-200 rounded-3xl qrcont qrcont2">
+							<div class="w-full lg:w-2/3 flex flex-col gap-2 qrimg-cont">
+								<div class="relative py-[7px] px-3 bg-white text-[13px] lg:text-lg rounded-t-xl rounded-b-md" style="display: flex; justify-content: center;">
+									<img src="src/images/help_2.jpg" class="qrimg" style="height: 100%; width: 100%;">
+								</div>
+
+								<div class="w-full flex p-[10px] text-[13px] lg:text-lg text-white bg-aqua-900 bg-opacity-40 qrbtn" style="margin-top: -5px; border-radius: 7px; text-align: center;">
+									<a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="mx-auto qrtext">Добавить изображение на фон 🌄</span></a>
+								</div>
+
+								<div class="w-full flex p-[10px] text-[13px] lg:text-lg text-white bg-aqua-900 bg-opacity-40 qrbtn" style="margin-top: -7px; border-radius: 7px;">
+									<a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="mx-auto qrtext">Превратить в тетрис 🎮</span></a>
+								</div>
+
+								<div class="w-full flex p-[10px] text-[13px] lg:text-lg text-white bg-aqua-900 bg-opacity-40 qrbtn" style="margin-top: -7px; border-radius: 7px;">
+									<a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="mx-auto qrtext">t.me</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="w-full lg:w-reset grid grid-cols-max lg:flex lg:flex-col gap-4 lg:gap-5">
+							<div class="
+								w-9 h-9 lg:w-16 lg:h-16 flex justify-center items-center text-2xl lg:text-[42px]
+								bg-gradient direction-[220deg] from-black to-darkblue-800 rounded-full
+								text-white dark:text-black dark:bg-white
+							">
+								2
+							</div>
+							<h3 class="col-start-2 font-semibold text-[28px] lg:text-[42px]">
+								Создание QR-кодов с изображением
+							</h3>
+							<p class="col-start-2 text-lg">Этот вид QR-кодов привлекают больше внимания</p>
+							<ol class="col-start-2 flex flex-col gap-2 list-decimal list-inside text-lg">
+								<li>Откройте <a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="text-aqua-500">@QR_code_lite_bot</span></a></li>
+								<li>Отправьте квадратную <span class="text-aqua-500">фотографию или гифку</span></li>
+								<li>Пришлите текст для <span class="text-aqua-500">QR-кода</span></li>
+							</ol>
+						</div>
+					</section>
+					<section class="flex flex-col lg:justify-between items-center lg:flex-row-reverse gap-4">
+						<div class="
+							w-[336px] h-[277px] lg:w-[590px] lg:h-[488px] flex flex-col justify-center items-center gap-2 p-5 lg:px-0 text-sm text-black
+							bg-gradient from-lightblue-200 to-aqua-100 rounded-3xl qrcont
+						">
+							<img src="src/images/help_3.png" class="qrimg-phone">
+						</div>
+						<div class="w-full lg:w-reset grid grid-cols-max lg:flex lg:flex-col gap-4 lg:gap-5">
+							<div class="
+								w-9 h-9 lg:w-16 lg:h-16 flex justify-center items-center text-2xl lg:text-[42px]
+								bg-gradient direction-[220deg] from-black to-darkblue-800 rounded-full
+								text-white dark:text-black dark:bg-white
+							">
+								3
+							</div>
+							<h3 class="col-start-2 font-semibold text-[28px] lg:text-[42px]">
+								Чтение <span class="whitespace-nowrap">QR-кодов</span>
+							</h3>
+							<p class="col-start-2 text-lg">Есть 2 способа:</p>
+							<ul class="col-start-2 flex flex-col gap-2 pl-5 list-disc text-lg">
+								<li><span>Открыть веб-приложение по кнопке “📸Сканировать QR-код” </span></li>
+								<li><span>Отправить фотографию с QR-кодом</span></li>
+							</ul>
+						</div>
+					</section>
+					<section class="flex flex-col lg:justify-between items-center lg:flex-row gap-4">
+						<div class="
+							w-[336px] h-[277px] lg:w-[590px] lg:h-[488px] flex flex-col justify-center items-center gap-2 p-5 lg:px-0 text-sm text-black
+							bg-gradient from-lightblue-200 to-aqua-100 rounded-3xl qrcont qrcont2
+						">
+							<img src="src/images/TMA_4.png" class="qrimg-phone">
+						</div>
+						<div class="w-full lg:w-reset grid grid-cols-max lg:flex lg:flex-col gap-4 lg:gap-5">
+							<div class="
+								w-9 h-9 lg:w-16 lg:h-16 flex justify-center items-center text-2xl lg:text-[42px]
+								bg-gradient direction-[220deg] from-black to-darkblue-800 rounded-full
+								text-white dark:text-black dark:bg-white
+							">
+								4
+							</div>
+							<h3 class="col-start-2 font-semibold text-[28px] lg:text-[42px]">
+								Telegram Mini Apps
+							</h3>
+							<p class="col-start-2 text-lg">В телеграмме есть возможность открывать сайты как мини приложения, это позволяет изменять параметры QR-кода в удобном web интерфейсе</p>
+							<ol class="col-start-2 flex flex-col gap-2 list-decimal list-inside text-lg">
+								<li>Откройте <a href="https://t.me/Qr_code_lite_bot?start=web" target="_blank" class="mx-auto"><span class="text-aqua-500">@QR_code_lite_bot</span></a></li>
+								<li>Отправьте квадратную <span class="text-aqua-500">фотографию или гифку</span></li>
+								<li>Пришлите текст для <span class="text-aqua-500">QR-кода</span></li>
+							</ol>
+						</div>
+					</section>
+				</div>
+			</article>
+		</main>
+
+		<footer class="max-w-[1200px] w-full flex flex-col gap-6 px-5 py-8 bg-gray-700 dark:bg-gray-900 bg-full-bleed">
+			<nav class="w-full flex justify-between items-center">
+				<div class="w-[104px]">
+					<img
+						src="src/logo/Qr-codeQR.svg"
+						alt="QR Bot Logo"
+						class="w-12 h-12 lg:w-16 lg:h-16"
+						style="width: 64px; height: 64px;"
+					/>
+				</div>
+				<menu class="hidden sm:flex items-center gap-8 mx-auto text-xl text-white">
+					<li>
+						<a href="#use-cases">Применение</a>
+					</li>
+					<li>
+						<a href="#features">Особенности</a>
+					</li>
+					<li>
+						<a href="#start-guide">Как использовать</a>
+					</li>
+				</menu>
+				<a
+					class="
+						h-full py-3 px-8 lg:py-4 lg:px-10 font-medium text-lg text-white whitespace-nowrap bg-transparent rounded-full
+						border border-white border-opacity-60 hover:border-opacity-100 transition-colors duration-200
+					"
+					href="https://t.me/Qr_code_lite_bot?start=web"
+					target="_blank"
+				>
+					Начать
+				</a>
+			</nav>
+			<p class="font-medium text-lg text-white cursor-default">©2023 QR Code Bot</p>
+		</footer>
+
+		<script>
+			const img1 = document.querySelector('.img1')
+			const img2 = document.querySelector('.img2')
+			const p1 = document.querySelector('.p1')
+
+			function btn1() {
+				img1.style.display = 'block'
+				img2.style.display = 'none'
+				p1.innerHTML = 'Создание обычного и красивого QR-кода:'
+			}
+			function btn2() {
+				img1.style.display = 'none'
+				img2.style.display = 'block'
+				p1.innerHTML = 'Сканирование QR-кода через web app:'
+			}
+		</script>
+
+		<script type="module" src="src/js/main.min.js"></script>
+	</body>
+</html>
